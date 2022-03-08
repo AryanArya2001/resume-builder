@@ -8,7 +8,7 @@ class CreateProfiles < ActiveRecord::Migration[6.1]
       t.text :overview
       t.string :primary_skills, array: true, default: []
       t.string :secondary_skills, array: true, default: []
-
+      t.text :image_data
       t.belongs_to :user, index: { unique: true }, foreign_key: true
 
       t.timestamps

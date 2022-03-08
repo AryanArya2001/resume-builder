@@ -12,7 +12,7 @@ default: &default
   # ['app/assets', 'engine/foo/app/assets']
   additional_paths: []
 
-  # Reload manifest.json on all requests so we reload latest compiled packs
+  # Reload manifest.js on all requests so we reload latest compiled packs
   cache_manifest: false
 
   # Extract and emit a css file
@@ -35,6 +35,7 @@ default: &default
   extensions:
     - .mjs
     - .js
+    - .jsx
     - .sass
     - .scss
     - .css
@@ -88,5 +89,5 @@ production:
   # Extract and emit a css file
   extract_css: true
 
-  # Cache manifest.json for performance
+  # Cache manifest.js for performance
   cache_manifest: true

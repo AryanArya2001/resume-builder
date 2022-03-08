@@ -1,0 +1,11 @@
+<%= render 'shared/edit_sub_section' do %>
+  <%= project.text_field :name, value: project.object.name, placeholder: "name" %><br/>  
+  <%= project.text_area :tech_stack, value: project.object.tech_stack, placeholder: "Tech stack" %><br/>
+  <%= project.text_area :url, value: project.object.url, placeholder: "Project url" %><br/>
+  <%= project.text_area :description, value: project.object.description, placeholder: "Description" %><br/>
+  <%= render 'shared/input/buttons/primary', 
+                                    color: "blue", 
+                                    label: "delete", 
+                                    href:  project_path(project.object.id),
+                                    method: "delete" %>
+<% end %>
